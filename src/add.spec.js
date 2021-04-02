@@ -25,11 +25,7 @@ describe('Sub', () => {
 })*/
 describe('head', () => {
 
-    it('head of [] is null', () => {
-        expect(head([])).toEqual(null);
-    });
-
-    it('head of [1,2,3] is 1', () => {
+    it('head of [1,2,3,4] is 1', () => {
         expect(head([1,2,3,4])).toEqual(1);
     });
 
