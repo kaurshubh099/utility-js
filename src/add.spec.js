@@ -1,4 +1,4 @@
-const add = require('./add');
+import add from './add';
 
 describe('Add', () => {
 
