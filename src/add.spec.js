@@ -1,5 +1,5 @@
-import add from './add';
-import sub from './sub';
+/*import add from './add';
+import sub from './sub';*/
 import head from './head';
 /*describe('Add', () => {
 
