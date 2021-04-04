@@ -1,9 +1,7 @@
-const head = (array) => {
-    if(length(array)==0){
+const head = (array1) => {
+    if( array1.length()==0){
         return null;
     }
-    else{
-        return array[0];
-    }
+    return array1[0];
 }
 export default head;
