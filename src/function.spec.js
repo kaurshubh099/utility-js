@@ -1,9 +1,9 @@
-import { head, tail } from './function';
+const functions = require('./function');
 
 describe('head', () => {
 
     it('head of [1,2,3,4] is 1', () => {
-        expect(head([1,2,3,4])).toEqual(1);
+        expect(functions.head([1,2,3,4])).toEqual(1);
     });
 
 })
@@ -11,10 +11,10 @@ describe('head', () => {
 describe('tail', () => {
 
     it('tail of [1,2,3,4] is [2,3,4]', () => {
-        expect(tail([1,2,3,4])).toEqual([1,2,3]);
+        expect(functions.tail([1,2,3,4])).toEqual([1,2,3]);
     });
     it('tail of [] is []', () => {
-        expect(tail([])).toEqual([]);
+        expect(functions.tail([])).toEqual([]);
     });
 
 })
