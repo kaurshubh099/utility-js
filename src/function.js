@@ -26,9 +26,24 @@ const functions = {
     cube(value){
         return value*value*value ; 
     },
+    filterUpperCase(value){
+        if(value===value.toUpperCase){
+            return true;
+        }
+        return false; 
+    },
     map(array1,operation){
         var array2=[]
         array2 = mapFunction(array1,array2,operation,0);
+        return array2;
+    },
+    filter(array1,condition){
+        var array2 =[]
+        for (x in array1){
+            if(condition){
+                array2.push(x);
+            }
+        }
         return array2;
     }
 }

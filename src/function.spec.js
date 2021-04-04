@@ -27,3 +27,10 @@ describe('map', () => {
 
 })
 
+describe('filter', () => {
+
+    it("filter(['a','B','c','D'], filterUpperCase)=['B','D']", () => {
+        expect(testFunctions.filter(['a','B','c','D'], filterUpperCase)).toEqual(['B','D']);
+    });
+
+})
