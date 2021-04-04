@@ -1,5 +1,5 @@
 function head(array1) {
-    if (length(array1) == 0) {
+    if (array1.length == 0) {
         return null;
     }
     return array1[0];
