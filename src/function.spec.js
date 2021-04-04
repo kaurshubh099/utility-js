@@ -22,7 +22,7 @@ describe('tail', () => {
 describe('map', () => {
 
     it('map([1,2,3],cube)=[1,8,27]', () => {
-        expect(testFunctions.map([1,2,3],cube)).toEqual([1,8,27]);
+        expect(testFunctions.map([1,2,3],'cube')).toEqual([1,8,27]);
     });
 
 })

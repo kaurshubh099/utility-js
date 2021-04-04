@@ -29,7 +29,6 @@ const functions = {
     map(array1,operation){
         array2=[]
         mapFunction(array1,array2,operation,0);
-        return array2;
     }
 }
 module.exports  = functions;
