@@ -26,10 +26,21 @@ const functions = {
     cube(value){
         return value*value*value ; 
     },
-    mapArray(array1,operation){
+    map(array1,operation){
         array2=[]
-        array2.push(operation(array1));
+        mapFunction(array1,array2,operation,0);
         return array2;
     }
 }
 module.exports  = functions;
+
+function mapFunction(array1,array2,operation,n){
+    if(n==array1.length){
+        return array2;
+    }
+    else{
+        array2.push(operation(array[n]));
+        return mapFunction(array1,array2,operation,n-1);
+    }
+
+}
