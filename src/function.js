@@ -39,9 +39,9 @@ const functions = {
     },
     filter(array1,condition){
         var array2 =[]
-        for (x in array1){
-            if(condition(x)){
-                array2.push(x);
+        for (int i=0;i<array1.length;i++){
+            if(condition(array1[i])){
+                array2.push(array1[i]);
             }
         }
         return array2;
