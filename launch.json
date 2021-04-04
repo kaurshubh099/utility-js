@@ -1,0 +1,29 @@
+{
+"configurations": [
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "program": "${workspaceFolder}/CGTC/cgc-node/main.js"
+    },
+
+    {
+      "name": "Jest",
+      "type": "node",
+      "request": "launch",
+      "env": { "NODE_ENV": "test" },
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/CGTC/cgc-node/node_modules/.bin/jest",
+      "stopOnEntry": false,
+      "args": ["--config=${workspaceRoot}/CGTC/cgc-node/package.json"],
+      "runtimeArgs": ["--nolazy"],
+      "console": "internalConsole",
+      "sourceMaps": false,
+      "internalConsoleOptions": "openOnSessionStart",
+      // "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node"
+    }
+]
+}
