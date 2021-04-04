@@ -1,5 +1,5 @@
-const head = (array1) => {
-    if( array1.length()==0){
+function head(array1) {
+    if (array1.length() == 0) {
         return null;
     }
     return array1[0];
