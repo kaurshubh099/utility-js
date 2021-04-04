@@ -19,3 +19,11 @@ describe('tail', () => {
 
 })
 
+describe('map', () => {
+
+    it('map([1,2,3],cube)=[1,8,27]', () => {
+        expect(functions.map([1,2,3,],cube)).toEqual([1,8,27]);
+    });
+
+})
+

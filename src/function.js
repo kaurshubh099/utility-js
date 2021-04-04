@@ -25,6 +25,11 @@ const functions = {
     },
     cube(value){
         return value*value*value ; 
+    },
+    mapArray(array1,operation){
+        array2=[]
+        array2.push(operation(array1));
+        return array2;
     }
 }
 module.exports  = functions;
