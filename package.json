@@ -1,15 +1,53 @@
 {
-  "name": "javascript-functions",
+  "name": "cgc-node",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "jest"
+  },
+  "_moduleAliases": {
+    "@": "src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^26.4.2"
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0",
+    "jest-environment-node": "^26.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "currency.js": "^2.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.19",
+    "module-alias": "^2.2.2",
+    "moment": "^2.27.0",
+    "mysql": "github:mysqljs/mysql",
+    "mysql2": "^2.1.0",
+    "uuid": "^8.2.0"
   }
 }
