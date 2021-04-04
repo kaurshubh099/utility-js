@@ -38,8 +38,8 @@ function mapFunction(array1,array2,operation,n){
         return array2;
     }
     else{
-        array2.push(functions.eval(operation(array1[n])));
-        return mapFunction(array1,array2,operation,n-1);
+        array2.push(eval(functions.operation(array1[n])));
+        return mapFunction(array1,array2,operation,n+1);
     }
 
 }
