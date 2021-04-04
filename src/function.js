@@ -11,7 +11,8 @@ const functions = {
     if(array1.length ==0){
         return [];
     }
-    return array1.shift();
+    array1.shift();
+    return array1;
     },
     maximum(array1){
         return max(array1);
