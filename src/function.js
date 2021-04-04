@@ -33,13 +33,13 @@ const functions = {
         return false; 
     },
     map(array1,operation){
-        var array2=[]
+        var array2=[];
         array2 = mapFunction(array1,array2,operation,0);
         return array2;
     },
     filter(array1,condition){
-        var array2 =[]
-        for (int i=0;i<array1.length;i++){
+        var i,array2 =[];
+        for ( i=0;i<array1.length;i++){
             if(condition(array1[i])){
                 array2.push(array1[i]);
             }
