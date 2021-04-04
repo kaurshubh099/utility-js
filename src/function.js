@@ -38,7 +38,7 @@ function mapFunction(array1,array2,operation,n){
         return array2;
     }
     else{
-        array2.push(operation(array1[n]));
+        array2.push(functions.operation(array1[n]));
         return mapFunction(array1,array2,operation,n-1);
     }
 
