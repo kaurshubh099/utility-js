@@ -27,7 +27,7 @@ const functions = {
         return value*value*value ; 
     },
     map(array1,operation){
-        array2=[]
+        var array2=[]
         mapFunction(array1,array2,operation,0);
     }
 }
