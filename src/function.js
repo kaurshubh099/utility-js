@@ -40,7 +40,7 @@ const functions = {
     filter(array1,condition){
         var array2 =[]
         for (x in array1){
-            if(condition){
+            if(condition(x)){
                 array2.push(x);
             }
         }
