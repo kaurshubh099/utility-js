@@ -23,15 +23,15 @@ describe('tail' , ()=>{
 describe('map' , ()=>{
 
     it('function should return empty array if array is empty and function is cube',()=>{
-        expect(testFunctions.map([],functions.cube)).toEqual([]);
+        expect(testFunctions.map([],testFunctions.cube)).toEqual([]);
     });
 
     it('function should return result array and function is cube & array is non-empty',()=>{
-        expect(testFunctions.map([1,2,3],functions.cube)).toEqual([1,8,27]);
+        expect(testFunctions.map([1,2,3],testFunctions.cube)).toEqual([1,8,27]);
     });
 
     it('function should return result array and function is identity & array is non-empty',()=>{
-        expect(testFunctions.map([1,2,3],functions.identity)).toEqual([1,2,3]);
+        expect(testFunctions.map([1,2,3],testFunctions.identity)).toEqual([1,2,3]);
     });
 
     it('function should return result array and some function is passed & array of objects is passed as argument ',()=>{
@@ -42,12 +42,12 @@ describe('map' , ()=>{
 describe('filter' , ()=>{
 
     it('function should return non-empty array if array passed as argument is non-empty',()=>{
-        let result = functions.filter([1,2,3],x => true);
+        var result = testFunctions.filter([1,2,3],x => true);
         expect(result.length).toBeGreaterThan(0);
     });
 
     it('function should return empty array if array passed as argument is empty',()=>{
-        let result = functions.filter([],x => true);
+        var result = testFunctions.filter([],x => true);
         expect(result.length).toEqual(0);
     });
 });
