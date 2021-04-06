@@ -45,7 +45,16 @@ const functions = {
             }
         }
         return array2;
-    }
+    },
+    reduce(array1,operation,x){
+        var result;
+        if(x)
+            result = x.toString();
+        else if(array1.length > 0){
+          result = '';
+        }
+        return reduceFunction(array1,result,operation,0);
+      }
 }
 module.exports  = functions;
 
@@ -53,9 +62,14 @@ function mapFunction(array1,array2,operation,n){
     if(n==array1.length){
         return array2;
     }
-    else{
-        array2.push(operation(array1[n]));
-        return mapFunction(array1,array2,operation,n+1);
-    }
+    array2.push(operation(array1[n]));
+    return mapFunction(array1,array2,operation,n+1);
+}
 
+function reduceFunction(array1,result,operation,n){
+    if(n == array1.length){
+        return result;
+    }
+    result = result + operation("",array1[n].toString());
+    return reduceFunction(array1,result,operation,n+1);
 }
