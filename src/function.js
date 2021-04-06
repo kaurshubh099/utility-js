@@ -17,12 +17,12 @@ const functions = {
     maximum(array1){
         if(array1.length==0)
             return null;
-        return Math.max(array1);
+        return Math.max.apply(null,array1);
     },
     minimum(array1){
         if(array1.length==0)
             return null;
-        return Math.min(array1);
+        return Math.min.apply(null,array1);
     },
     identity(value){
         return value;
