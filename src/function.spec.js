@@ -52,18 +52,18 @@ describe('filter' , ()=>{
     });
 });
 
-describe('max',()=>{
+describe('maximum',()=>{
 
     it('function should return greatest element if argument array is non-empty',()=>{
-        expect(testFunctions.max([3,5,1])).toEqual(5);
+        expect(testFunctions.maximum([3,5,1])).toEqual(5);
     });
 
 });
 
-describe('min',()=>{
+describe('minimum',()=>{
 
     it('function should return smallest element if argument array is non-empty',()=>{
-        expect(testFunctions.min([3,5,1])).toEqual(1);
+        expect(testFunctions.minimum([3,5,1])).toEqual(1);
     });
 
 });
