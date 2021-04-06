@@ -54,10 +54,6 @@ describe('filter' , ()=>{
 
 describe('max',()=>{
 
-    it('function should return null if argument array is empty',()=>{
-        expect(testFunctions.max([])).toBeNull();
-    });
-
     it('function should return greatest element if argument array is non-empty',()=>{
         expect(testFunctions.max([3,5,1])).toEqual(5);
     });
@@ -65,10 +61,6 @@ describe('max',()=>{
 });
 
 describe('min',()=>{
-
-    it('function should return null if argument array is empty',()=>{
-        expect(testFunctions.min([])).toBeNull();
-    });
 
     it('function should return smallest element if argument array is non-empty',()=>{
         expect(testFunctions.min([3,5,1])).toEqual(1);

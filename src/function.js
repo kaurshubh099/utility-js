@@ -15,9 +15,13 @@ const functions = {
     return array1;
     },
     maximum(array1){
+        if(array1.length==0)
+            return null;
         return max(array1);
     },
     minimum(array1){
+        if(array1.length==0)
+            return null;
         return min(array1);
     },
     identity(value){
