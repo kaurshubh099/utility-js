@@ -52,6 +52,26 @@ describe('filter' , ()=>{
     });
 });
 
+describe('reduce' , ()=>{
+
+    it('function should return start char if array is empty and start character is not null',()=>{
+        expect(testFunctions.reduce([],(x,y)=>x+y,10)).toEqual('10');
+    });
+
+    it('function should return undefined if array is empty and start character is null',()=>{
+        expect(testFunctions.reduce([],(x,y)=>x+y,null)).toBeUndefined();
+    });
+
+    it('function should return result after applying reducer function passed as an argument',()=>{
+        expect(testFunctions.reduce(['a','b','c'],(x,y)=>x+y,null)).toEqual('abc');
+    });
+
+    it('function should return result after applying reducer function passed as an argument',()=>{
+        expect(testFunctions.reduce(['a','b','c'],(x,y)=>x+y,'z')).toEqual('zabc');
+    });
+
+});
+
 describe('maximum',()=>{
 
     it('function should return greatest element if argument array is non-empty',()=>{
@@ -68,26 +88,3 @@ describe('minimum',()=>{
 
 });
 
-describe('reduce' , ()=>{
-
-    it('function should return start char if array is empty and start character is not null',()=>{
-        let startChar = 10;
-        expect(testFunctions.reduce([],(x,y)=>x+y,startChar)).toEqual('10');
-    });
-
-    it('function should return undefined if array is empty and start character is null',()=>{
-        let startChar = null;
-        expect(testFunctions.reduce([],(x,y)=>x+y,startChar)).toBeUndefined();
-    });
-
-    it('function should return result after applying reducer function passed as an argument',()=>{
-        let startChar = null;
-        expect(testFunctions.reduce(['a','b','c'],(x,y)=>x+y,startChar)).toEqual('abc');
-    });
-
-    it('function should return result after applying reducer function passed as an argument',()=>{
-        let startChar = 'z';
-        expect(testFunctions.reduce(['a','b','c'],(x,y)=>x+y,startChar)).toEqual('zabc');
-    });
-
-});
